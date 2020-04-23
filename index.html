@@ -11,6 +11,17 @@
             crossorigin="anonymous"
         />
         <script src="script.js" type="module" defer></script>
+        <style>
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input[type="number"] {
+                -moz-appearance: textfield;
+            }
+        </style>
     </head>
     <body>
         <div class="container my-5">
@@ -39,12 +50,14 @@
             >
             <form class="form-inline mt-5">
                 <div class="form-group mx-sm-3 mb-2">
-                    <label for="input">Enter a number</label>
+                    <label for="input" class="sr-only">Enter a number</label>
                     <input
                         id="input"
-                        type="text"
+                        type="number"
+                        min="0"
                         name="input"
                         class="form-control ml-3"
+                        placeholder="Enter a number"
                     />
                 </div>
                 <button
