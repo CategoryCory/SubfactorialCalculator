@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Subfactorial</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <script src="script.js" type="module" defer></script>
+    </head>
+    <body>
+        <div class="container my-5">
+            <h1 class="text-center">Subfactorial Calculator</h1>
+            <p>
+                A subfactorial of n is the number of permutations of n objects
+                where no object appears in its natural place, which is also
+                referred to as a "derangement." For example, the subfactorial of
+                3 is 2, because there are only two ways to arrange {1, 2, 3} in
+                which no object is in its natural place...{2, 3, 1} and {3, 1,
+                2}.
+            </p>
+            <p>
+                The subfactorial of a number can be found using the following
+                formula:
+            </p>
+            <h5>$$!n=n!\sum_{k=0}^{n}\frac{(-1)^k}{k!}$$</h5>
+            <p>
+                To find the subfactorial of a number, enter the number in the
+                box below and click Calculate.
+            </p>
+            <form class="form-inline mt-5">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="input">Enter a number</label>
+                    <input
+                        id="input"
+                        type="text"
+                        name="input"
+                        class="form-control ml-3"
+                    />
+                </div>
+                <button
+                    id="calculate"
+                    type="submit"
+                    class="btn btn-primary mb-2"
+                >
+                    Calculate
+                </button>
+            </form>
+        </div>
+        <div id="output" class="container"></div>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        ></script>
+    </body>
+</html>
