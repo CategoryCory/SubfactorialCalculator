@@ -15,10 +15,11 @@ calculateButton.addEventListener("click", (e) => {
 
     if (isPositiveInteger(inputValue)) {
         const resultValue = subfactorial(inputValue);
-        resultText.innerHTML = `<h5>The subfactorial of ${inputValue} is <span class="font-weight-bold">${resultValue}.</span></h5>`;
+        resultText.innerHTML = `The subfactorial of ${inputValue} is <span class="font-weight-bold">${resultValue}.</span>`;
+        resultText.classList.add("alert", "alert-primary");
     } else {
-        resultText.innerHTML =
-            '<p class="text-danger">Please enter a valid, nonnegative integer.</p>';
+        resultText.innerHTML = "Please enter a valid, nonnegative integer.";
+        resultText.classList.add("alert", "alert-danger");
     }
 
     outputDiv.appendChild(resultText);
