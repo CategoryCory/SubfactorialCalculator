@@ -18,7 +18,7 @@ calculateButton.addEventListener("click", (e) => {
         resultText.innerHTML = `<h5>The subfactorial of ${inputValue} is <span class="font-weight-bold">${resultValue}.</span></h5>`;
     } else {
         resultText.innerHTML =
-            '<p class="text-danger">Please enter a valid, nonnegative number.</p>';
+            '<p class="text-danger">Please enter a valid, nonnegative integer.</p>';
     }
 
     outputDiv.appendChild(resultText);
