@@ -4,6 +4,8 @@ const input = document.getElementById("input");
 const calculateButton = document.getElementById("calculate");
 const outputDiv = document.getElementById("output");
 
+input.value = "";
+
 calculateButton.addEventListener("click", (e) => {
     e.preventDefault();
     outputDiv.innerHTML = "";
@@ -20,6 +22,7 @@ calculateButton.addEventListener("click", (e) => {
     }
 
     outputDiv.appendChild(resultText);
+    input.value = "";
 });
 
 function isPositiveInteger(str) {

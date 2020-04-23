@@ -24,7 +24,7 @@
         </style>
     </head>
     <body>
-        <div class="container my-5">
+        <div class="container px-4 my-5">
             <h1 class="text-center">Subfactorial Calculator</h1>
             <p>
                 A subfactorial of n is the number of permutations of n objects
@@ -48,25 +48,31 @@
                 can be calculated is 170. Any value greater than this will
                 return NaN.</small
             >
-            <form class="form-inline mt-5">
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="input" class="sr-only">Enter a number</label>
-                    <input
-                        id="input"
-                        type="number"
-                        min="0"
-                        name="input"
-                        class="form-control ml-3"
-                        placeholder="Enter a number"
-                    />
+            <form class="mt-5">
+                <div class="form-row align-items-center">
+                    <div class="col-6 col-md-4">
+                        <label for="input" class="sr-only"
+                            >Enter a number</label
+                        >
+                        <input
+                            id="input"
+                            type="number"
+                            min="0"
+                            name="input"
+                            class="form-control"
+                            placeholder="Enter a number"
+                        />
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <button
+                            id="calculate"
+                            type="submit"
+                            class="btn btn-outline-primary"
+                        >
+                            Calculate
+                        </button>
+                    </div>
                 </div>
-                <button
-                    id="calculate"
-                    type="submit"
-                    class="btn btn-primary mb-2"
-                >
-                    Calculate
-                </button>
             </form>
         </div>
         <div id="output" class="container"></div>
